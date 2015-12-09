@@ -1,0 +1,6 @@
+---
+- name: Download Oracle Java
+  command: 'curl -L http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.rpm -o /tmp/jdk-8u66-linux-x64.rpm  -H --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"' creates=/tmp/jdk-8u66-linux-x64.rpm
+
+- name: Install Oracle Java
+  command: rpm -Uvh jdk-8u66-linux-x64.rpm
